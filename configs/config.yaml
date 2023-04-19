@@ -1,0 +1,17 @@
+cookie:
+  expiry_days: 0
+  key: karim # Must be string
+  name: karim
+credentials:
+  usernames:
+    karim:
+      email: karim.elmernissi.75@gmail.com
+      name: Karim
+      password: "$2b$12$z9VtqltQTTuvNqOnEafazu/yo4pBjzAu2MyvnoQrUqMsILie0hfju" # To be replaced with hashed password
+    etudiant:
+      email: etudiant@gmail.com
+      name: etudiant
+      password: "$2b$12$NW7/ftXY4ifqp6B3q9CRdO7hZiRBD5KdHo2fZlGrNCyG73aRCrxDK" # To be replaced with hashed password
+preauthorized:
+  emails:
+  - karim.elmernissi.75@gmail.com
