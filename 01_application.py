@@ -58,11 +58,12 @@ else:
 
 # Présentation de l'app
 def main_page():
-    st.markdown("# Présentation :medical_symbol:")
-    st.markdown("## blabla :test_tube:")
-    st.markdown(":drop_of_blood: blabla :stethoscope:")
+    st.markdown("# Présentation de l'application :medical_symbol:")
+    st.markdown("## Tutoriel vidéo :test_tube:")
+    st.markdown("MetaboSign est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS")
     st.sidebar.markdown("# Présentation :medical_symbol:")
-    st_lottie(url_json,reverse=True,height=None,width=None,speed=1.5,loop=True,quality='high',key='med_team' )
+    st.video('https://youtu.be/0kvLEDUr9Bg', start_time=0)
+    #st_lottie(url_json,reverse=True,height=None,width=None,speed=1.5,loop=True,quality='high',key='med_team' )
     
 
 # Saisie manuelle
@@ -205,6 +206,8 @@ page_names_to_funcs = {
 }
 
 # authentif hash
+#hashed_passwords = stauth.Hasher(['karim', 'duia']).generate()
+#st.write(hashed_passwords)
 with open('configs/config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
@@ -226,6 +229,7 @@ if st.session_state["authentication_status"]:
         selected_page = option_menu("Menu", ["Présentation","Saisie manuelle","Upload","Modification des données","Data Exploration","Diagnostic"], 
             icons=['house','pencil-square','cloud-upload','input-cursor','search','robot'], menu_icon="cast", default_index=0)
             
+    #selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
     page_names_to_funcs[selected_page]()
 elif st.session_state["authentication_status"] == False:
     st.error('Username/password is incorrect')
