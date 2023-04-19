@@ -205,8 +205,6 @@ page_names_to_funcs = {
 }
 
 # authentif hash
-#hashed_passwords = stauth.Hasher(['karim', 'duia']).generate()
-#st.write(hashed_passwords)
 with open('configs/config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
@@ -228,7 +226,6 @@ if st.session_state["authentication_status"]:
         selected_page = option_menu("Menu", ["Présentation","Saisie manuelle","Upload","Modification des données","Data Exploration","Diagnostic"], 
             icons=['house','pencil-square','cloud-upload','input-cursor','search','robot'], menu_icon="cast", default_index=0)
             
-    #selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
     page_names_to_funcs[selected_page]()
 elif st.session_state["authentication_status"] == False:
     st.error('Username/password is incorrect')
