@@ -24,7 +24,7 @@ if "mdf" not in st.session_state:
     #pd.DataFrame(columns=["id","sexe","age","label","cortisol","composé S","17OHP","Delta4A","Testostérone","Progestérone"])
 
 st.set_page_config(
-   page_title="Détection de malignité dans les tumeurs de la corticosurrénale",
+   page_title="Détection de malignité dans les tumeurs de la corticosurénale",
    page_icon=":pill:",
    layout="wide",
    initial_sidebar_state="expanded"
@@ -172,7 +172,7 @@ def diagnostic():
     st.sidebar.markdown("# Diagnostic :stethoscope:")
     
     model_choice = st.selectbox('Choix du modèle',
-    ('Augmented Decision Tree', 'Augmented Features Agglomeration LR', 'Augmented XGB'))
+    ('Augmented Decision Tree', 'Augmented Features Agglomeration LR', 'Augmented XGB','Consensus'))
     if model_choice == 'Augmented Decision Tree':
         with open('predict_dtc.pkl', 'rb') as f:
             model_load = pickle.load(f)
@@ -182,17 +182,26 @@ def diagnostic():
     elif model_choice == 'Augmented XGB':
         with open('predict_xgb.pkl', 'rb') as f:
             model_load = pickle.load(f)
-    if st.session_state.mdf is not None:
-        malignance = model_load.predict(st.session_state.mdf)
-        malignance_prob = model_load.predict_proba(st.session_state.mdf)
+    elif model_choice == 'Consensus':
+        with open('predict_xgb.pkl', 'rb') as f:
+            model_xgb = pickle.load(f)
+        with open('predict_red.pkl', 'rb') as f:
+            model_red_lr = pickle.load(f)
+        with open('predict_dtc.pkl', 'rb') as f:
+            model_dt = pickle.load(f)
+            
     st_lottie(url_robot_json,reverse=True,height=None,width=(500),speed=1.5,loop=True,quality='high',key='robot' )
     if st.button('Diagnostiquer la tumeur :stethoscope:'):
         
         if st.session_state.mdf is not None:
             st.success('diagnostic réalisé !')
             malignance = pd.DataFrame(st.session_state.mdf['id'])
-            malignance['malignité'] = model_load.predict(st.session_state.mdf)
-            malignance['probabilité de maliginité (%)'] = model_load.predict_proba(st.session_state.mdf)[:,1]*100
+            if model_choice != 'Consensus':
+                malignance['malignité'] = model_load.predict(st.session_state.mdf)
+                malignance['probabilité de maliginité (%)'] = model_load.predict_proba(st.session_state.mdf)[:,1]*100
+            else:
+                malignance['score_consensus'] = model_dt.predict(st.session_state.mdf) + model_xgb.predict(st.session_state.mdf) + model_red_lr.predict(st.session_state.mdf)   
+                malignance['malignité'] = malignance['score_consensus'].apply(lambda x: 'Benin' if x == 0  else 'Malin' if x == 3 else 'Examens complémentaires requis')
             st.dataframe(malignance, use_container_width=True)
 
 
