@@ -10,7 +10,7 @@ contact_form = """
      <input type="text" name="name" placeholder="Votre nom" required>
      <input type="email" name="email" placeholder="Votre email" required>
      <textarea name="message" placeholder="Votre message"></textarea>
-     <button type="submit">Send</button>
+     <button type="submit">Envoyer</button>
 </form>
 """
 
