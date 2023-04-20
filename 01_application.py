@@ -47,7 +47,7 @@ else:
     print("Error in URL")
 
 # load animation from lottie url
-url_robot = requests.get("https://assets3.lottiefiles.com/packages/lf20_q7wkifyr.json")
+url_robot = requests.get("https://assets10.lottiefiles.com/packages/lf20_mLnvYR.json") #https://assets3.lottiefiles.com/packages/lf20_q7wkifyr.json
 url_robot_json = dict()
 if url.status_code == 200:
     url_robot_json = url_robot.json()
