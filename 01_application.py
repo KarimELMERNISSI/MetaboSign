@@ -190,7 +190,7 @@ def diagnostic():
         with open('predict_dtc.pkl', 'rb') as f:
             model_dt = pickle.load(f)
             
-    st_lottie(url_robot_json,reverse=True,height=None,width=(500),speed=1.5,loop=True,quality='high',key='robot' )
+    st_lottie(url_robot_json,reverse=True,height=None,width=None,speed=1.5,loop=True,quality='high',key='robot' )
     if st.button('Diagnostiquer la tumeur :stethoscope:'):
         
         if st.session_state.mdf is not None:
