@@ -1,6 +1,13 @@
 
 import streamlit as st  # pip install streamlit
 
+st.set_page_config(
+   page_title="Détection de malignité dans les tumeurs de la corticosurénale",
+   page_icon=":pill:",
+   layout="wide",
+   initial_sidebar_state="expanded"
+)
+
 st.header(":mailbox: Laissez nous un message")
 
 
