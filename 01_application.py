@@ -190,7 +190,6 @@ def diagnostic():
         with open('predict_dtc.pkl', 'rb') as f:
             model_dt = pickle.load(f)
             
-    st_lottie(url_robot_json,reverse=True,height=None,width=None,speed=1.5,loop=True,quality='high',key='robot' )
     if st.button('Diagnostiquer la tumeur :stethoscope:'):
         
         if st.session_state.mdf is not None:
@@ -203,7 +202,8 @@ def diagnostic():
                 malignance['score_consensus'] = model_dt.predict(st.session_state.mdf) + model_xgb.predict(st.session_state.mdf) + model_red_lr.predict(st.session_state.mdf)   
                 malignance['malignité'] = malignance['score_consensus'].apply(lambda x: 'Benin' if x == 0  else 'Malin' if x == 3 else 'Examens complémentaires requis')
             st.dataframe(malignance, use_container_width=True)
-
+    st_lottie(url_robot_json,reverse=True,height=None,width=None,speed=1.5,loop=True,quality='high',key='robot' )
+    
 
 page_names_to_funcs = {
     "Présentation": main_page,
