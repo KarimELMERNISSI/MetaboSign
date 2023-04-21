@@ -63,27 +63,27 @@ unsafe_allow_html=True)
 # Create a dictionary to hold the team members' information
 team = {
     "Fidéline Bonnet-Serrano": {
-        "title": "Cofounder & Med",
+        "title": "Co-founder & Med",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Fideline.jpg?raw=true",
         "bio": "TBD"
     },
     "Christelle Cahen": {
-        "title": "Founder & industry",
+        "title": "Co-Founder & industry",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Christelle.jpg?raw=true",
         "bio": "TBD"
     },
     "Mathilde Chanut": {
-        "title": "Founder & Med",
+        "title": "Co-Founder & Med",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Mathilde.jpg?raw=true",
         "bio": "TBD"
     },
     "Delphine Cozzone": {
-        "title": "Founder & Industry",
+        "title": "Co-Founder & Industry",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Delphine.jpg?raw=true",
         "bio": "TDB"
     },
     "Karim El Mernissi": {
-        "title": "Founder & Tech",
+        "title": "Co-Founder & Tech",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/linkedin_pic.jpg?raw=true",
         "bio": "TBD"
     }
