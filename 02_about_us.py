@@ -109,5 +109,5 @@ def main():
     for name in team:
         personal_card(name)
 
-if __name__ == "__main__":
-    main()
+
+main()
