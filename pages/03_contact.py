@@ -1,32 +1,83 @@
-
-import streamlit as st  # pip install streamlit
+import streamlit as st
 
 st.set_page_config(
-   page_title="Détection de malignité dans les tumeurs de la corticosurénale",
-   page_icon=":pill:",
-   layout="wide",
-   initial_sidebar_state="expanded"
+    page_title="Contactez-nous",
+    page_icon=":mailbox_with_mail:",
+    layout="wide"
 )
 
-st.header(":mailbox: Laissez nous un message")
-
-
-contact_form = """
-<form action="https://formsubmit.co/KARIM.EVASION@GMAIL.COM" method="POST">
-     <input type="hidden" name="_captcha" value="false">
-     <input type="text" name="name" placeholder="Votre nom" required>
-     <input type="email" name="email" placeholder="Votre email" required>
-     <textarea name="message" placeholder="Votre message"></textarea>
-     <button type="submit">Envoyer</button>
-</form>
+# Define contact form HTML
+contact_form_html = """
+<div class="form-container">
+    <h2>Contactez-nous</h2>
+    <p>Remplissez le formulaire ci-dessous pour nous envoyer un message.</p>
+    <form action="https://formsubmit.co/KARIM.EVASION@GMAIL.COM" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message"></textarea>
+        <input type="submit" value="Envoyer">
+    </form>
+</div>
 """
 
-st.markdown(contact_form, unsafe_allow_html=True)
+# Define CSS styling
+st.markdown("""
+<style>
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
 
-# Use Local CSS File
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+.form-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
+.form-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+}
 
-local_css("./style/style.css")
+.form-container input[type=text],
+.form-container input[type=email],
+.form-container textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input[type=submit] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3f51b5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container input[type=submit]:hover {
+    background-color: #2c3e50;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# Display contact form
+st.markdown(contact_form_html, unsafe_allow_html=True)
