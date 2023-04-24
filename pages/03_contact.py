@@ -8,8 +8,9 @@ st.set_page_config(
 
 # Define contact form HTML
 contact_form_html = """
+<h1>Contactez-nous</h1>
 <div class="form-container">
-    <h2>Contactez-nous</h2>
+    <h2>Prise de contact</h2>
     <p>Remplissez le formulaire ci-dessous pour nous envoyer un message.</p>
     <form action="https://formsubmit.co/KARIM.EVASION@GMAIL.COM" method="POST">
         <input type="hidden" name="_captcha" value="false">
@@ -24,6 +25,21 @@ contact_form_html = """
 # Define CSS styling
 st.markdown("""
 <style>
+h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 3em;
+    color: #1F618D;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    color: #2C3E50;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 .form-container {
     max-width: 800px;
     margin: 0 auto;

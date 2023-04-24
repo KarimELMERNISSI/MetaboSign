@@ -20,6 +20,12 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #1F618D;
+}
+
 p {
     font-size: 1.2em;
     color: #2C3E50;
@@ -37,6 +43,24 @@ p {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.metabosign-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.metabosign-card img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    max-width: 200px;
 }
 
 .personal-card img {
@@ -98,12 +122,25 @@ def personal_card(name):
     # Create a card to display the team member's information
     st.write(f"<div class='personal-card'><img src='{photo}'><h2>{name}</h2><p>{title}</p><p>{bio}</p></div>", unsafe_allow_html=True)
 
+def company_card():
+    # Get the team member's information from the dictionary
+    photo = "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign.jpg?raw=true"
+    description = """
+        MetaboSign est spécialisée dans l'identification de profil métabolomique sérique par LC-MS/MS et investit continuellement en R&D pour identifier d'autres applications suite à ce premier outil. 
+        Le choix de notre modèle économique tient compte d'une part des perspectives de développement de MetaboSign, et d'autre part, du nombre restreint de clients potentiels pour l'outil diagnostic des corticosurrénalomes puisque l'on estime à une trentaine, le nombre de laboratoires équipés de LC-MS/MS en France."""
+    
+    # Create a card to display the team member's information
+    st.write(f"<div class='metabosign-card'><img src='{photo}'><h2>{description}</h2></div>", unsafe_allow_html=True)
+
 
 # Create the Streamlit app
 def about_us():
     # Set the page title and header
     #st.set_page_config(page_title="About Us", page_icon=":smiley:")
-    st.write("<h1>À propos de Nous</h1><p>Notre équipe:</p>", unsafe_allow_html=True)
+    st.write("""
+            <h1>À propos de Nous</h1>""", unsafe_allow_html=True)
+    company_card()     
+    st.write("""<h2>Notre équipe</h2>""", unsafe_allow_html=True)
     
     # Display a personal card for each team member
     for name in team:
