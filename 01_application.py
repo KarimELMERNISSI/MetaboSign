@@ -30,6 +30,33 @@ st.set_page_config(
    initial_sidebar_state="expanded"
 )
 
+st.markdown(
+"""
+<style>
+h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 3em;
+    color: #1F618D;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #1F618D;
+}
+
+p {
+    font-size: 1.2em;
+    color: #2C3E50;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+</style>
+""",
+unsafe_allow_html=True)
+
 # load animation from lottie url
 url = requests.get("https://assets1.lottiefiles.com/packages/lf20_uwWgICKCxj.json")
 url_json = dict()
@@ -58,9 +85,9 @@ else:
 
 # Présentation de l'app
 def main_page():
-    st.markdown("# Présentation de l'application :medical_symbol:")
-    st.markdown("## Tutoriel vidéo :test_tube:")
-    st.markdown("MetaboSign est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS")
+    st.markdown("# Présentation de l'application")
+    st.markdown("## Tutoriel vidéo")
+    st.markdown("MetaboSign-Corticosurrénale est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS.")
     st.sidebar.markdown("# Présentation :medical_symbol:")
     st.video('https://youtu.be/0kvLEDUr9Bg', start_time=0)
     #st_lottie(url_json,reverse=True,height=None,width=None,speed=1.5,loop=True,quality='high',key='med_team' )
@@ -68,7 +95,7 @@ def main_page():
 
 # Saisie manuelle
 def saisie_manuelle():
-    st.markdown("# :green[ Saisie manuelle] :writing_hand:\n\n")
+    st.markdown("# Saisie manuelle\n\n")
     st.sidebar.markdown("# Saisie manuelle :writing_hand:")
     avs.add_vertical_space(4)
     col0, col1, col2, col4, col5, col6, col7, col8, col9= st.columns(9,gap="small") #col3,
@@ -84,9 +111,7 @@ def saisie_manuelle():
     progesterone = col9.number_input('Progestérone',min_value=0.01)
 
     run = st.button('Submit')
-
-    
-            
+      
     if run:
         df_new = pd.DataFrame({'id': id, 
                             'sexe': sexe, 
@@ -112,8 +137,8 @@ def saisie_manuelle():
 
 # Upload
 def upload():
-    st.markdown("# Page 2 : Upload :floppy_disk:")
-    st.sidebar.markdown("# Page 2 : Upload :floppy_disk:")
+    st.markdown("# Upload")
+    st.sidebar.markdown("# Upload :floppy_disk:")
     uploaded_file = st.file_uploader(label="Choose a CSV file",type='csv') 
     if uploaded_file:
         df = pd.read_csv(uploaded_file,sep=';')
@@ -135,7 +160,7 @@ def f():
 
 # Modification de données
 def data_modification():
-    st.markdown("# Modification des données :hammer_and_wrench:")
+    st.markdown("# Modification des données")
     st.sidebar.markdown("# Modification des données :hammer_and_wrench:")
     #st.write(df)
     #df = st.session_state.mdf
@@ -150,7 +175,7 @@ def data_modification():
 
 # Exploration
 def exploration():
-    st.markdown("# Data Exploration :see_no_evil:")
+    st.markdown("# Data Exploration")
     st.sidebar.markdown("# Data Exploration :see_no_evil:")
     if st.session_state.mdf is not None:
         filtered_df = dataframe_explorer(st.session_state.mdf)
@@ -168,7 +193,7 @@ def exploration():
 # Diagnostic
 #@st.cache
 def diagnostic():
-    st.markdown("# Diagnostic :stethoscope:")
+    st.markdown("# Diagnostic")
     st.sidebar.markdown("# Diagnostic :stethoscope:")
     
     model_choice = st.selectbox('Choix du modèle',
