@@ -24,6 +24,7 @@ h2 {
     margin-top: 0;
     font-size: 2em;
     color: #1F618D;
+    text-align: center;
 }
 
 p {
@@ -61,6 +62,13 @@ p {
     border-radius: 50%;
     margin-bottom: 20px;
     max-width: 200px;
+}
+
+.metabosign-card p {
+    margin-bottom: 0;
+    font-size: 1.2em;
+    color: #2C3E50;
+    text-align: justify;
 }
 
 .personal-card img {
@@ -130,7 +138,7 @@ def company_card():
         Le choix de notre modèle économique tient compte d'une part des perspectives de développement de MetaboSign, et d'autre part, du nombre restreint de clients potentiels pour l'outil diagnostic des corticosurrénalomes puisque l'on estime à une trentaine, le nombre de laboratoires équipés de LC-MS/MS en France."""
     
     # Create a card to display the team member's information
-    st.write(f"<div class='metabosign-card'><img src='{photo}'><h2>{description}</h2></div>", unsafe_allow_html=True)
+    st.write(f"<div class='metabosign-card'><img src='{photo}'><p>{description}</p></div>", unsafe_allow_html=True)
 
 
 # Create the Streamlit app
