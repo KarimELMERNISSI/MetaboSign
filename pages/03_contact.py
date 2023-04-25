@@ -92,6 +92,10 @@ p {
 .form-container input[type=submit]:hover {
     background-color: #2c3e50;
 }
+
+footer {
+	visibility: hidden;
+}
 </style>
 """, unsafe_allow_html=True)
 

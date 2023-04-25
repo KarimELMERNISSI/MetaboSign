@@ -114,6 +114,10 @@ p {
     font-size: 1.2em;
     color: #2C3E50;
 }
+
+footer {
+	visibility: hidden;
+}
 </style>
 """,
 unsafe_allow_html=True)
