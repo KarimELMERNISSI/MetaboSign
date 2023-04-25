@@ -53,6 +53,11 @@ p {
     margin-bottom: 30px;
     text-align: justify;
 }
+
+footer {
+	visibility: hidden;
+}
+
 </style>
 """,
 unsafe_allow_html=True)
@@ -252,6 +257,7 @@ authenticator = stauth.Authenticate(
     config['cookie']['expiry_days'],
     config['preauthorized']
 )
+
 
 name, authentication_status, username = authenticator.login('Login', 'main')
 
