@@ -47,21 +47,29 @@ p {
 }
 
 .metabosign2-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: justify;
     background-color: #FFFFFF;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.metabosign2-card .image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
 }
 
 .metabosign2-card img {
     border-radius: 50%;
-    margin-right: 20px;
     max-width: 200px;
+    display: block;
+    margin: auto;
 }
 
 .metabosign-card {
@@ -160,9 +168,12 @@ def company_card():
     #st.write(f"<div class='metabosign-card'><img src='{photo1}'><p>{description}</p></div>", unsafe_allow_html=True)
     st.write(f"""
     <div class='metabosign2-card'>
-    <img src='{photo1}' alt="Votre première image">
-    <img src='{photo2}' alt="Votre seconde image">
-    <p>{description}</p></div>""", unsafe_allow_html=True)
+        <div class="image-container">
+            <img src='{photo1}' alt="MetaboSign">
+            <img src='{photo2}' alt="Université Paris-Cité">
+        </div>
+        <p>{description}</p>
+    </div>""", unsafe_allow_html=True)
 
 # Create the Streamlit app
 def about_us():
