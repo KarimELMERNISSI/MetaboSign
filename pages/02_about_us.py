@@ -46,6 +46,24 @@ p {
     text-align: center;
 }
 
+.metabosign2-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+.metabosign2-card img {
+    border-radius: 50%;
+    margin-right: 20px;
+    max-width: 200px;
+}
+
 .metabosign-card {
     background-color: #FFFFFF;
     padding: 20px;
@@ -64,7 +82,7 @@ p {
     max-width: 200px;
 }
 
-.metabosign-card p {
+.metabosign2-card p {
     margin-bottom: 0;
     font-size: 1.2em;
     color: #2C3E50;
@@ -132,14 +150,19 @@ def personal_card(name):
 
 def company_card():
     # Get the team member's information from the dictionary
-    photo = "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign.jpg?raw=true"
+    photo1 = "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign.jpg?raw=true"
+    photo2 = "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/UniversiteParisCite_logo_horizontal_couleur_RVB.jpg?raw=true"
     description = """
         MetaboSign est spécialisée dans l'identification de profil métabolomique sérique par LC-MS/MS et investit continuellement en R&D pour identifier d'autres applications suite à ce premier outil. 
         Le choix de notre modèle économique tient compte d'une part des perspectives de développement de MetaboSign, et d'autre part, du nombre restreint de clients potentiels pour l'outil diagnostic des corticosurrénalomes puisque l'on estime à une trentaine, le nombre de laboratoires équipés de LC-MS/MS en France."""
     
     # Create a card to display the team member's information
-    st.write(f"<div class='metabosign-card'><img src='{photo}'><p>{description}</p></div>", unsafe_allow_html=True)
-
+    #st.write(f"<div class='metabosign-card'><img src='{photo1}'><p>{description}</p></div>", unsafe_allow_html=True)
+    st.write(f"""
+    <div class='metabosign2-card'>
+    <img src='{photo1}' alt="Votre première image">
+    <img src='{photo2}' alt="Votre seconde image">
+    <p>{description}</p></div>""", unsafe_allow_html=True)
 
 # Create the Streamlit app
 def about_us():
