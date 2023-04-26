@@ -1,9 +1,16 @@
 import streamlit as st
+import requests
+from io import BytesIO
+from PIL import Image
+
+img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign_icon.png?raw=true").content
+img = Image.open(BytesIO(img_content))
 
 st.set_page_config(
     page_title="Contactez-nous",
-    page_icon=":mailbox_with_mail:",
-    layout="wide"
+    page_icon=img,
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
 # Define contact form HTML
