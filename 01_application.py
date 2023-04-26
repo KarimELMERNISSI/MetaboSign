@@ -55,7 +55,9 @@ p {
     text-align: justify;
 }
 
-#MainMenu {visibility: hidden;}
+#MainMenu {
+    visibility: hidden;
+}
 
 footer {
 	visibility: hidden;
@@ -97,13 +99,13 @@ def main_page():
     st.markdown("## Tutoriel vidéo")
     st.markdown("MetaboSign-Corticosurrénale est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS.")
     st.sidebar.markdown("# Présentation :medical_symbol:")
-    st.video('https://youtu.be/0kvLEDUr9Bg', start_time=0)
+    st.video('https://youtu.be/ntRInkPfY7Y', start_time=0)
     #st_lottie(url_json,reverse=True,height=None,width=None,speed=1.5,loop=True,quality='high',key='med_team' )
     
 
 # Saisie manuelle
 def saisie_manuelle():
-    st.markdown("# Saisie manuelle\n\n")
+    st.markdown("# Saisie manuelle")
     st.sidebar.markdown("# Saisie manuelle :writing_hand:")
     avs.add_vertical_space(4)
     col0, col1, col2, col4, col5, col6, col7, col8, col9= st.columns(9,gap="small") #col3,
