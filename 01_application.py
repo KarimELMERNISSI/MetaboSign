@@ -17,7 +17,11 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 from detect_delimiter import detect
+from io import BytesIO
+from PIL import Image
 
+img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign_icon.png?raw=true").content
+img = Image.open(BytesIO(img_content))
 
  # state variable   
 if "mdf" not in st.session_state:
@@ -26,7 +30,7 @@ if "mdf" not in st.session_state:
 
 st.set_page_config(
    page_title="Détection de malignité dans les tumeurs de la corticosurénale",
-   page_icon=":pill:",
+   page_icon=img,
    layout="wide",
    initial_sidebar_state="expanded"
 )
