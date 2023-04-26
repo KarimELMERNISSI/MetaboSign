@@ -16,6 +16,7 @@ from streamlit_option_menu import option_menu
 import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
+from detect_delimiter import detect
 
 
  # state variable   
@@ -53,6 +54,8 @@ p {
     margin-bottom: 30px;
     text-align: justify;
 }
+
+#MainMenu {visibility: hidden;}
 
 footer {
 	visibility: hidden;
@@ -146,7 +149,8 @@ def upload():
     st.sidebar.markdown("# Upload :floppy_disk:")
     uploaded_file = st.file_uploader(label="Choose a CSV file",type='csv') 
     if uploaded_file:
-        df = pd.read_csv(uploaded_file,sep=';')
+        separator = detect(uploaded_file.getvalue().decode("utf-8"))
+        df = pd.read_csv(uploaded_file,sep=separator)
         success_notif = "Chargement des données du fichier \""+uploaded_file.name+"\" réussi"
         st.success(success_notif)
         st.session_state.mdf = pd.concat([st.session_state.mdf, df], axis=0)
