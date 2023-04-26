@@ -115,6 +115,10 @@ p {
     color: #2C3E50;
 }
 
+#MainMenu {
+    visibility: hidden;
+}
+
 footer {
 	visibility: hidden;
 }

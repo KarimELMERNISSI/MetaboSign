@@ -93,6 +93,10 @@ p {
     background-color: #2c3e50;
 }
 
+#MainMenu {
+    visibility: hidden;
+}
+
 footer {
 	visibility: hidden;
 }
