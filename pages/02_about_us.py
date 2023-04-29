@@ -51,6 +51,23 @@ p {
     text-align: center;
 }
 
+.qr-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-card img {
+    border-radius: 10%;
+    max-width: 200px;
+    display: block;
+    margin: auto;
+}
+
 .metabosign2-card {
     background-color: #FFFFFF;
     padding: 20px;
@@ -192,17 +209,26 @@ def company_card():
         <p>{description}</p>
     </div>""", unsafe_allow_html=True)
 
+def qr_card():
+    code_qr = "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/MetaboSignQR.jpg?raw=true"
+    st.write(f"""
+    <h2>Faites-nous connaitre</h2>
+    <div class='qr-card'>
+        <img src='{code_qr}' alt="MetaboSign QR Code">
+    </div>""", unsafe_allow_html=True)
+
+
 # Create the Streamlit app
 def about_us():
     # Set the page title and header
-    #st.set_page_config(page_title="About Us", page_icon=":smiley:")
-    st.write("""
-            <h1>À propos de Nous</h1>""", unsafe_allow_html=True)
+    st.write("""<h1>À propos de Nous</h1>""", unsafe_allow_html=True)
     company_card()     
-    st.write("""<h2>Notre équipe</h2>""", unsafe_allow_html=True)
     
+    st.write("""<h2>Notre équipe</h2>""", unsafe_allow_html=True)
     # Display a personal card for each team member
     for name in team:
         personal_card(name)
+
+    qr_card()
 
 about_us()
