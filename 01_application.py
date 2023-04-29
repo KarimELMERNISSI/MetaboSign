@@ -99,7 +99,6 @@ else:
     print("Error in URL")
 
 
-
 # Présentation de l'app
 def main_page():
     st.markdown("# Présentation de l'application")
@@ -261,6 +260,8 @@ page_names_to_funcs = {
     "Diagnostic": diagnostic
 }
 
+st.markdown("# MetaboSign - Corticosurrénale")
+
 # authentif hash
 #hashed_passwords = stauth.Hasher(['karim', 'duia']).generate()
 #st.write(hashed_passwords)
@@ -274,6 +275,7 @@ authenticator = stauth.Authenticate(
     config['cookie']['expiry_days'],
     config['preauthorized']
 )
+
 
 
 name, authentication_status, username = authenticator.login('Login', 'main')
