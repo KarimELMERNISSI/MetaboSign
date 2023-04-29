@@ -123,12 +123,12 @@ def saisie_manuelle():
     sexe = col1.text_input('sexe', help="F or M")
     age = col2.number_input('age',min_value=0,format='%i')
     #label = col3.text_input('label')
-    cortisol = col4.number_input('cortisol',min_value=0.01)
-    compose_s = col5.number_input('composé S',min_value=0.01)
-    var_17OHP = col6.number_input('17OHP',min_value=0.01)
-    delta4A = col7.number_input('Delta4A',min_value=0.01)
-    testosterone = col8.number_input('Testostérone',min_value=0.01)
-    progesterone = col9.number_input('Progestérone',min_value=0.01)
+    cortisol = col4.number_input('cortisol',min_value=0.01, help="nmol/L")
+    compose_s = col5.number_input('composé S',min_value=0.01, help="nmol/L")
+    var_17OHP = col6.number_input('17OHP',min_value=0.01, help="nmol/L")
+    delta4A = col7.number_input('Delta4A',min_value=0.01, help="nmol/L")
+    testosterone = col8.number_input('Testostérone',min_value=0.01, help="nmol/L")
+    progesterone = col9.number_input('Progestérone',min_value=0.01, help="nmol/L")
 
     run = st.button('Submit')
       
