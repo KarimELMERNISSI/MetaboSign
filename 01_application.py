@@ -29,7 +29,7 @@ if "mdf" not in st.session_state:
     #pd.DataFrame(columns=["id","sexe","age","label","cortisol","composé S","17OHP","Delta4A","Testostérone","Progestérone"])
 
 st.set_page_config(
-   page_title="Détection de malignité dans les tumeurs de la corticosurénale",
+   page_title="Détection de malignité dans les tumeurs de la corticosurrénale",
    page_icon=img,
    layout="wide",
    initial_sidebar_state="expanded"
