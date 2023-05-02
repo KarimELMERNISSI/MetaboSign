@@ -137,6 +137,13 @@ p {
     color: #2C3E50;
 }
 
+.streamlit-expanderHeader {
+    margin-top: 0;
+    font-size: 2em;
+    color: #1F618D;
+    text-align: center;
+}
+
 #MainMenu {
     visibility: hidden;
 }
@@ -222,13 +229,15 @@ def qr_card():
 def about_us():
     # Set the page title and header
     st.write("""<h1>À propos de Nous</h1>""", unsafe_allow_html=True)
-    company_card()     
+    with st.expander(label='# MetaboSign',expanded=True):
+        company_card()     
     
-    st.write("""<h2>Notre équipe</h2>""", unsafe_allow_html=True)
-    # Display a personal card for each team member
-    for name in team:
-        personal_card(name)
-
+    #st.write("""<h2>Notre équipe</h2>""", unsafe_allow_html=True)
+    with st.expander(label='# Notre équipe',expanded=True):
+        # Display a personal card for each team member
+        for name in team:
+            personal_card(name)
+    
     qr_card()
 
 about_us()
