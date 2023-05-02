@@ -70,6 +70,13 @@ footer {
 header {
 	visibility: hidden;
 }
+
+.streamlit-expanderHeader {
+    font-size: 1.2em;
+    color: #2C3E50;
+    margin-bottom: 30px;
+    text-align: justify;
+}
 </style>
 """,
 unsafe_allow_html=True)
@@ -103,12 +110,14 @@ else:
 def main_page():
     st.markdown("# Présentation de l'application")
     st.markdown("## Tutoriel vidéo")
-    st.markdown("MetaboSign-Corticosurrénale est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS.")
     st.sidebar.markdown("# Présentation :medical_symbol:")
-    st.video('https://youtu.be/ntRInkPfY7Y', start_time=0)
+    with st.expander(label="# MetaboSign-Corticosurrénale est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS.",expanded=True):
+        #st.markdown("MetaboSign-Corticosurrénale est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS.")
+        st.video('https://youtu.be/ntRInkPfY7Y', start_time=0)
     st.markdown("## Rappels sur la glande surrénale")
-    st.markdown("La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.")
-    st.video('https://www.youtube.com/watch?v=eiOWyPOCUCM', start_time=18)
+    with st.expander(label="# La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.",expanded=True):
+        #st.markdown("La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.")
+        st.video('https://www.youtube.com/watch?v=eiOWyPOCUCM', start_time=18)
 
     #st_lottie(url_json,reverse=True,height=None,width=None,speed=1.5,loop=True,quality='high',key='med_team' )
     
