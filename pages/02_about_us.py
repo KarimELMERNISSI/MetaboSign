@@ -179,7 +179,7 @@ team = {
     "Delphine Cozzone": {
         "title": "Co-Founder & Industry",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Delphine.jpg?raw=true",
-        "bio": "Marketing & Industrie pharmaceutique"
+        "bio": "Marketing & Industrie Pharmaceutique"
     },
     "Karim El Mernissi": {
         "title": "Co-Founder & Tech",
