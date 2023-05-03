@@ -164,27 +164,27 @@ team = {
     "Fidéline Bonnet-Serrano": {
         "title": "Co-founder & Med",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Fideline.jpg?raw=true",
-        "bio": "TBD"
+        "bio": "Endocrinologue-Biologiste en Hormonologie"
     },
     "Christelle Cahen": {
         "title": "Co-Founder & industry",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Christelle.jpg?raw=true",
-        "bio": "TBD"
+        "bio": "Business & Health"
     },
     "Mathilde Chanut": {
         "title": "Co-Founder & Med",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Mathilde.jpg?raw=true",
-        "bio": "TBD"
+        "bio": "Interne en Hématologie"
     },
     "Delphine Cozzone": {
         "title": "Co-Founder & Industry",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Delphine.jpg?raw=true",
-        "bio": "TDB"
+        "bio": "Marketing & Industrie pharmaceutique"
     },
     "Karim El Mernissi": {
         "title": "Co-Founder & Tech",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/linkedin_pic.jpg?raw=true",
-        "bio": "TBD"
+        "bio": "Data Scientist & AI Developer"
     }
 }
 
