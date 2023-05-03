@@ -175,7 +175,7 @@ def upload():
         success_notif = "Chargement des données du fichier \""+uploaded_file.name+"\" réussi"
         st.success(success_notif)
         st.session_state.mdf = pd.concat([st.session_state.mdf, df], axis=0)
-        st.session_state.mdf = st.session_state.mdf.set_index(st.session_state.mdf['id'])
+        st.session_state.mdf = st.session_state.mdf.set_index(st.session_state.mdf['id']).drop_duplicates(keep='last', subset='id')
         st.dataframe(st.session_state.mdf)
     if st.session_state.mdf is not None:
         st.write(f"Total Rows: {st.session_state.mdf.shape[0]}")
