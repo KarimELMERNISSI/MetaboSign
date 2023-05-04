@@ -112,7 +112,7 @@ else:
 def main_page():
     st.markdown("# Présentation de l'application")
     st.markdown("## Tutoriel vidéo")
-    st.sidebar.markdown("# Présentation :medical_symbol:")
+    #st.sidebar.markdown("# Présentation :medical_symbol:")
     with st.expander(label="# MetaboSign-Corticosurrénale est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS.",expanded=True):
         #st.markdown("MetaboSign-Corticosurrénale est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS.")
         st.video('https://youtu.be/ntRInkPfY7Y', start_time=0)
@@ -120,14 +120,15 @@ def main_page():
     with st.expander(label="# La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.",expanded=True):
         #st.markdown("La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.")
         st.video('https://www.youtube.com/watch?v=eiOWyPOCUCM', start_time=18)
+    st.markdown("## Accéder au Jupyter Notebook")
+    link = '[IA et signature métabolomique de malignité](https://colab.research.google.com/gist/KarimELMERNISSI/60b1c3868c84e59649c23ff588fb8f54/concentrations-et-classif-last-version.ipynb)'
+    st.markdown(link, unsafe_allow_html=True)
 
-    #st_lottie(url_json,reverse=True,height=None,width=None,speed=1.5,loop=True,quality='high',key='med_team' )
-    
 
 # Saisie manuelle
 def saisie_manuelle():
     st.markdown("# Saisie manuelle")
-    st.sidebar.markdown("# Saisie manuelle :writing_hand:")
+    #st.sidebar.markdown("# Saisie manuelle :writing_hand:")
     avs.add_vertical_space(4)
     col0, col1, col2, col4, col5, col6, col7, col8, col9= st.columns(9,gap="small") #col3,
     id= col0.text_input('id', help="string identifer")
@@ -169,7 +170,7 @@ def saisie_manuelle():
 # Upload
 def upload():
     st.markdown("# Upload")
-    st.sidebar.markdown("# Upload :floppy_disk:")
+    #st.sidebar.markdown("# Upload :floppy_disk:")
     uploaded_file = st.file_uploader(label="Choose a CSV file",type='csv') 
     if uploaded_file:
         separator = detect(uploaded_file.getvalue().decode("utf-8"))
@@ -193,7 +194,7 @@ def f():
 # Modification de données
 def data_modification():
     st.markdown("# Modification des données")
-    st.sidebar.markdown("# Modification des données :hammer_and_wrench:")
+    #st.sidebar.markdown("# Modification des données :hammer_and_wrench:")
     #st.write(df)
     #df = st.session_state.mdf
     if st.session_state.mdf is not None:
@@ -208,7 +209,7 @@ def data_modification():
 # Exploration
 def exploration():
     st.markdown("# Data Exploration")
-    st.sidebar.markdown("# Data Exploration :see_no_evil:")
+    #st.sidebar.markdown("# Data Exploration :see_no_evil:")
     if st.session_state.mdf is not None:
         filtered_df = dataframe_explorer(st.session_state.mdf)
         st.dataframe(filtered_df, use_container_width=True)
@@ -226,7 +227,7 @@ def exploration():
 #@st.cache
 def diagnostic():
     st.markdown("# Diagnostic")
-    st.sidebar.markdown("# Diagnostic :stethoscope:")
+    #st.sidebar.markdown("# Diagnostic :stethoscope:")
     
     model_choice = st.selectbox('Choix du modèle',
     ('Augmented Decision Tree', 'Augmented Features Agglomeration LR', 'Augmented XGB','Consensus'))
