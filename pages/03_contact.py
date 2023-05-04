@@ -6,6 +6,9 @@ from PIL import Image
 img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign_icon.png?raw=true").content
 img = Image.open(BytesIO(img_content))
 
+univ_img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/up-metabosign.png?raw=true").content
+univ_img = Image.open(BytesIO(univ_img_content))
+
 st.set_page_config(
     page_title="Contactez-nous",
     page_icon=img,
@@ -119,4 +122,4 @@ header {
 st.markdown(contact_form_html, unsafe_allow_html=True)
 
 #st.sidebar.header("MetaboSign")
-st.sidebar.image(img,use_column_width='auto')
+st.sidebar.image(univ_img,use_column_width='auto')

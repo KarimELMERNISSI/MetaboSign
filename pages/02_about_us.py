@@ -6,6 +6,9 @@ from PIL import Image
 img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign_icon.png?raw=true").content
 img = Image.open(BytesIO(img_content))
 
+univ_img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/up-metabosign.png?raw=true").content
+univ_img = Image.open(BytesIO(univ_img_content))
+
 st.set_page_config(
    page_title="MetaboSign & Nous",
    page_icon=img,
@@ -169,7 +172,7 @@ team = {
     "Christelle Cahen": {
         "title": "Co-Founder & industry",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Christelle.jpg?raw=true",
-        "bio": "Business & Health"
+        "bio": "Business, Santé animale"
     },
     "Mathilde Chanut": {
         "title": "Co-Founder & Med",
@@ -179,12 +182,12 @@ team = {
     "Delphine Cozzone": {
         "title": "Co-Founder & Industry",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Delphine.jpg?raw=true",
-        "bio": "Marketing & Industrie Pharmaceutique"
+        "bio": "Marketing, Industrie Pharmaceutique"
     },
     "Karim El Mernissi": {
         "title": "Co-Founder & Tech",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/linkedin_pic.jpg?raw=true",
-        "bio": "Data Scientist & AI Developer"
+        "bio": "Data Scientist, AI Developer"
     }
 }
 
@@ -200,7 +203,7 @@ def personal_card(name):
 def company_card():
     # Get the team member's information from the dictionary
     photo1 = "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign.jpg?raw=true"
-    photo2 = "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/UniversiteParisCite_logo_horizontal_couleur_RVB.jpg?raw=true"
+    photo2 = "https://u-paris.fr/wp-content/uploads/2022/03/UniversiteParisCite_logo_horizontal_couleur_RVB.png"
     description = """
         MetaboSign est spécialisée dans l'identification de profil métabolomique sérique par LC-MS/MS et investit continuellement en R&D pour identifier d'autres applications suite à ce premier outil. 
         Le choix de notre modèle économique tient compte d'une part des perspectives de développement de MetaboSign, et d'autre part, du nombre restreint de clients potentiels pour l'outil diagnostic des corticosurrénalomes puisque l'on estime à une trentaine, le nombre de laboratoires équipés de LC-MS/MS en France."""
@@ -243,4 +246,4 @@ def about_us():
 about_us()
 
 #st.sidebar.header("MetaboSign")
-st.sidebar.image(img,use_column_width='auto')
+st.sidebar.image(univ_img,use_column_width='auto')
