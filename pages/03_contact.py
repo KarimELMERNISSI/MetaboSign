@@ -13,6 +13,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+
 # Define contact form HTML
 contact_form_html = """
 <h1>Contactez-nous</h1>
@@ -26,7 +27,7 @@ contact_form_html = """
         <textarea name="message" placeholder="Votre message"></textarea>
         <input type="submit" value="Envoyer">
     </form>
-</div>
+</div>      
 """
 
 # Define CSS styling
@@ -116,3 +117,6 @@ header {
 
 # Display contact form
 st.markdown(contact_form_html, unsafe_allow_html=True)
+
+#st.sidebar.header("MetaboSign")
+st.sidebar.image(img,use_column_width='auto')

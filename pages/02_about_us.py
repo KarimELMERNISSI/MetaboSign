@@ -241,3 +241,6 @@ def about_us():
     qr_card()
 
 about_us()
+
+#st.sidebar.header("MetaboSign")
+st.sidebar.image(img,use_column_width='auto')
