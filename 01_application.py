@@ -105,7 +105,6 @@ if url.status_code == 200:
 else:
     print("Error in URL")
 
-
 # Présentation de l'app
 def main_page():
     st.markdown("# Présentation de l'application")
@@ -303,4 +302,7 @@ elif st.session_state["authentication_status"] == False:
     st.error('Username/password is incorrect')
 elif st.session_state["authentication_status"] == None:
     st.warning('Please enter your username and password')
+
+#st.sidebar.header("MetaboSign")
+st.sidebar.image(img,use_column_width='auto')
 
