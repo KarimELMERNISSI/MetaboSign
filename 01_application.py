@@ -23,6 +23,9 @@ from PIL import Image
 img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign_icon.png?raw=true").content
 img = Image.open(BytesIO(img_content))
 
+univ_img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/up-metabosign.png?raw=true").content
+univ_img = Image.open(BytesIO(univ_img_content))
+
  # state variable   
 if "mdf" not in st.session_state:
     st.session_state.mdf = None
@@ -304,5 +307,5 @@ elif st.session_state["authentication_status"] == None:
     st.warning('Please enter your username and password')
 
 #st.sidebar.header("MetaboSign")
-st.sidebar.image(img,use_column_width='auto')
+st.sidebar.image(univ_img,use_column_width='auto',)
 
