@@ -19,12 +19,16 @@ from yaml.loader import SafeLoader
 from detect_delimiter import detect
 from io import BytesIO
 from PIL import Image
+import base64
 
 img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign_icon.png?raw=true").content
 img = Image.open(BytesIO(img_content))
 
 univ_img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/up-metabosign.png?raw=true").content
 univ_img = Image.open(BytesIO(univ_img_content))
+
+#pdf_content = "https://github.com/KarimELMERNISSI/MetaboSign/blob/3d4dffcd72c616f11913de1088434b9e7ab67790/Gpe01_M%C3%A9moire_IA%20et%20signature%20m%C3%A9tabolomique%20de%20malignit%C3%A9_VF%20(4).pdf"
+#pdf_file = BytesIO(pdf_content)
 
  # state variable   
 if "mdf" not in st.session_state:
@@ -108,6 +112,13 @@ if url.status_code == 200:
 else:
     print("Error in URL")
 
+def displayPDF(file):
+    # Opening file from file path
+    with open(file, "rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}#zoom=FitW" width=100% height=900 type="application/pdf"></iframe>'   
+    st.markdown(pdf_display, unsafe_allow_html=True)
+
 # Présentation de l'app
 def main_page():
     st.markdown("# Présentation de l'application")
@@ -120,6 +131,8 @@ def main_page():
     with st.expander(label="# La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.",expanded=True):
         #st.markdown("La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.")
         st.video('https://www.youtube.com/watch?v=eiOWyPOCUCM', start_time=18)
+    st.markdown("## Accéder au mémoire du projet")
+    displayPDF('Gpe01_Mémoire_IA et signature métabolomique de malignité_VF (4).pdf')
     st.markdown("## Accéder au Jupyter Notebook")
     link = '[IA et signature métabolomique de malignité](https://colab.research.google.com/gist/KarimELMERNISSI/60b1c3868c84e59649c23ff588fb8f54/concentrations-et-classif-last-version.ipynb)'
     st.markdown(link, unsafe_allow_html=True)
