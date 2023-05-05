@@ -27,8 +27,7 @@ img = Image.open(BytesIO(img_content))
 univ_img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/up-metabosign.png?raw=true").content
 univ_img = Image.open(BytesIO(univ_img_content))
 
-pdf_url = "https://raw.githubusercontent.com/KarimELMERNISSI/MetaboSign/0227361d502db2da0a4e04b58fec62e0d39caa2b/Gpe01_M%C3%A9moire_IA%20et%20signature%20m%C3%A9tabolomique%20de%20malignit%C3%A9_VF%20(4).pdf"
-
+pdf_url = "https://github.com/KarimELMERNISSI/MetaboSign/raw/main/Gpe01_Mémoire_IA et signature métabolomique de malignité_VF (4).pdf"
  # state variable   
 if "mdf" not in st.session_state:
     st.session_state.mdf = None
