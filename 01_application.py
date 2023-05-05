@@ -131,8 +131,8 @@ def main_page():
     with st.expander(label="# La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.",expanded=True):
         #st.markdown("La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.")
         st.video('https://www.youtube.com/watch?v=eiOWyPOCUCM', start_time=18)
-    st.markdown("## Accéder au mémoire du projet")
-    displayPDF('Gpe01_Mémoire_IA et signature métabolomique de malignité_VF (4).pdf')
+    #st.markdown("## Accéder au mémoire du projet")
+    #displayPDF('Gpe01_Mémoire_IA et signature métabolomique de malignité_VF (4).pdf')
     st.markdown("## Accéder au Jupyter Notebook")
     link = '[IA et signature métabolomique de malignité](https://colab.research.google.com/gist/KarimELMERNISSI/60b1c3868c84e59649c23ff588fb8f54/concentrations-et-classif-last-version.ipynb)'
     st.markdown(link, unsafe_allow_html=True)
