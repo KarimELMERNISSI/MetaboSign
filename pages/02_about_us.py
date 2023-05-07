@@ -206,8 +206,8 @@ def company_card():
     photo2 = "https://u-paris.fr/wp-content/uploads/2022/03/UniversiteParisCite_logo_horizontal_couleur_RVB.png"
     description = """
         MetaboSign est spécialisée dans l'identification de profil métabolomique sérique par LC-MS/MS et investit continuellement en R&D pour identifier d'autres applications suite à ce premier outil. 
-        Le choix de notre modèle économique tient compte d'une part des perspectives de développement de MetaboSign, et d'autre part, du nombre restreint de clients potentiels pour l'outil diagnostic des corticosurrénalomes puisque l'on estime à une trentaine, le nombre de laboratoires équipés de LC-MS/MS en France."""
-    
+        Le choix de notre modèle économique tient compte d'une part des perspectives de développement de MetaboSign, et d'autre part, du nombre restreint de clients potentiels pour l'outil diagnostic des corticosurrénalomes puisque l'on estime à une trentaine, le nombre de laboratoires équipés de LC-MS/MS en France.
+        Cet outil d'aide au diagnostic des corticosurrénalomes est le fruit d'un projet réalisé dans le cadre du DU Intelligence artificielle appliquée en santé à l'Université Paris Cité. Il n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique et son usage est exclusivement confidentiel."""
     # Create a card to display the team member's information
     #st.write(f"<div class='metabosign-card'><img src='{photo1}'><p>{description}</p></div>", unsafe_allow_html=True)
     st.write(f"""
@@ -232,11 +232,11 @@ def qr_card():
 def about_us():
     # Set the page title and header
     st.write("""<h1>À propos de Nous</h1>""", unsafe_allow_html=True)
-    with st.expander(label='# MetaboSign',expanded=True):
+    with st.expander(label='# MetaboSign',expanded=False):
         company_card()     
     
     #st.write("""<h2>Notre équipe</h2>""", unsafe_allow_html=True)
-    with st.expander(label='# Notre équipe',expanded=True):
+    with st.expander(label='# Notre équipe',expanded=False):
         # Display a personal card for each team member
         for name in team:
             personal_card(name)
