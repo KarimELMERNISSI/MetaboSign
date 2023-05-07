@@ -136,8 +136,8 @@ def main_page():
     st.markdown("# Présentation de l'application")
     st.markdown("## Tutoriel vidéo")
     #st.sidebar.markdown("# Présentation :medical_symbol:")
-    with st.expander(label="# MetaboSign-Corticosurrénale est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS.",expanded=True):
-        #st.markdown("MetaboSign-Corticosurrénale est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS.")
+    with st.expander(label="# MetaboSign-Corticosurrénale est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS. Cet outil d'aide au diagnostic des corticosurrénalomes est le fruit d'un projet réalisé dans le cadre du DU Intelligence artificielle appliquée en santé à l'Université Paris Cité. Il n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique et son usage est exclusivement confidentiel.",expanded=True):
+        #st.markdown("Cet outil d'aide au diagnostic des corticosurrénalomes est le fruit d'un projet réalisé dans le cadre du DU Intelligence artificielle appliquée en santé à l'Université Paris Cité. Il n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique et son usage est exclusivement confidentiel.")
         st.video('https://youtu.be/ntRInkPfY7Y', start_time=0)
     st.markdown("## Rappels sur la glande surrénale")
     with st.expander(label="# La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.",expanded=True):
