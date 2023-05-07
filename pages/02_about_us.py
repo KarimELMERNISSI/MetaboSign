@@ -207,7 +207,7 @@ def company_card():
     description = """
         MetaboSign est spécialisée dans l'identification de profil métabolomique sérique par LC-MS/MS et investit continuellement en R&D pour identifier d'autres applications suite à ce premier outil. 
         Le choix de notre modèle économique tient compte d'une part des perspectives de développement de MetaboSign, et d'autre part, du nombre restreint de clients potentiels pour l'outil diagnostic des corticosurrénalomes puisque l'on estime à une trentaine, le nombre de laboratoires équipés de LC-MS/MS en France.
-        Ce site est le fruit d'un projet réalisé dans le cadre du DU Intelligence artificielle appliquée en santé à l'Université Paris Cité et n'a pas de vocation commerciale."""
+        Ce site est le fruit d'un projet réalisé dans le cadre du DU Intelligence artificielle appliquée à la santé de l'Université Paris Cité et n'a pas de vocation commerciale."""
     # Create a card to display the team member's information
     #st.write(f"<div class='metabosign-card'><img src='{photo1}'><p>{description}</p></div>", unsafe_allow_html=True)
     st.write(f"""
