@@ -2,6 +2,9 @@ import streamlit as st
 import requests
 from io import BytesIO
 from PIL import Image
+import streamlit_authenticator as stauth
+import yaml
+from yaml.loader import SafeLoader
 
 img_content = requests.get("https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign_icon.png?raw=true").content
 img = Image.open(BytesIO(img_content))
@@ -16,10 +19,8 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-
 # Define contact form HTML
 contact_form_html = """
-<h1>Vous avez des suggestions</h1>
 <div class="form-container">
     <h2>Contactez-nous</h2>
     <p>Remplissez le formulaire ci-dessous pour nous envoyer un message.</p>
@@ -118,8 +119,30 @@ header {
 </style>
 """, unsafe_allow_html=True)
 
-# Display contact form
-st.markdown(contact_form_html, unsafe_allow_html=True)
+st.markdown("""<h1>Vous avez des suggestions - Page réservée aux étudiants du DU d'intelligence artificielle de L'Université Paris Cité</h1>""", unsafe_allow_html=True)
+
+with open('./configs/config.yaml') as file:
+    config = yaml.load(file, Loader=SafeLoader)
+
+authenticator = stauth.Authenticate(
+    config['credentials'],
+    config['cookie']['name'],
+    config['cookie']['key'],
+    config['cookie']['expiry_days'],
+    config['preauthorized']
+)
+
+
+
+name, authentication_status, username = authenticator.login('Login', 'main')
+
+
+if st.session_state["authentication_status"]:
+    authenticator.logout('Logout', 'main')
+    st.write(f'Bienvenue *{st.session_state["name"]}*')
+
+    # Display contact form
+    st.markdown(contact_form_html, unsafe_allow_html=True)
 
 #st.sidebar.header("MetaboSign")
 st.sidebar.image(univ_img,use_column_width='auto')
