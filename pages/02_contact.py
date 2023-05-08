@@ -119,7 +119,7 @@ header {
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""<h1>Vous avez des suggestions - Page réservée aux étudiants du DU d'intelligence artificielle de l'Université Paris Cité</h1>""", unsafe_allow_html=True)
+st.markdown("""<h1>Vous avez des suggestions - Accès réservé aux étudiants du DU d'IA en santé de l'Université Paris Cité</h1>""", unsafe_allow_html=True)
 
 with open('./configs/config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
