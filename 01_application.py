@@ -143,12 +143,12 @@ def main_page():
     with st.expander(label="# La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.",expanded=True):
         #st.markdown("La glande surrénale sécrète plusieurs hormones indispensables à la survie du corps humain. En effet, elle synthétise les glucocorticoïdes, les minéralocorticoïdes, les androgènes et les catécholamines. En cas de dysfonctionnement, la production de ces hormones est perturbée et cela peut induire divers pathologies. Ainsi, dans notre contexte, nous nous sommes concentrés sur la recherche d'une \"signature hormonale\" caractérisant les tumeurs malignes de la corticosurrénale.")
         st.video('https://www.youtube.com/watch?v=eiOWyPOCUCM', start_time=18)
-    st.markdown("## Accéder au Jupyter Notebook")
-    link_notebook = '[IA et signature métabolomique de malignité - Notebook](https://colab.research.google.com/gist/KarimELMERNISSI/60b1c3868c84e59649c23ff588fb8f54/concentrations-et-classif-last-version.ipynb)'
-    st.markdown(link_notebook, unsafe_allow_html=True)
-    st.markdown("## Accéder au mémoire du projet")
-    link_pdf = f'[IA et signature métabolomique de malignité - PDF]({pdf_url})'
-    st.markdown(link_pdf, unsafe_allow_html=True)
+    #st.markdown("## Accéder au Jupyter Notebook")
+    #link_notebook = '[IA et signature métabolomique de malignité - Notebook](https://colab.research.google.com/gist/KarimELMERNISSI/60b1c3868c84e59649c23ff588fb8f54/concentrations-et-classif-last-version.ipynb)'
+    #st.markdown(link_notebook, unsafe_allow_html=True)
+    #st.markdown("## Accéder au mémoire du projet")
+    #link_pdf = f'[IA et signature métabolomique de malignité - PDF]({pdf_url})'
+    #st.markdown(link_pdf, unsafe_allow_html=True)
     #displayPDF(pdf_url)
 
 
