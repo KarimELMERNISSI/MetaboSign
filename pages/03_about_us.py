@@ -248,7 +248,7 @@ about_us()
 #st.sidebar.header("MetaboSign")
 st.sidebar.image(univ_img,use_column_width='auto')
 st.sidebar.markdown("""
-Ce dispositif médical est encore en développement. Son utilisation, quelle qu'en soit sa nature, ne peut engager la responsabilité de ses créateurs.
+Ce dispositif médical est encore en développement. 
+Son utilisation, quelle qu'en soit sa nature, ne peut engager la responsabilité de ses créateurs.
 Cet outil est la propriété intellectuelle des auteurs. Toute contrefaçon, plagiat, reproduction illicite est interdite.
-L'Université de Paris Cité n'entend donner aucune approbation ou improbation cette production qui doit être considérée comme propre à leurs auteurs.""")
-
+L'Université de Paris Cité n'entend donner aucune approbation ou improbation à cette production qui doit être considérée comme propre à leurs auteurs.""")
