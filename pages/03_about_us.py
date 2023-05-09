@@ -43,7 +43,7 @@ p {
 }
 
 psidebar {
-    font-size: 1.1em;
+    font-size: 1em;
     color: #2C3E50;
     margin-bottom: 30px;
     text-align: left;
@@ -256,7 +256,7 @@ st.sidebar.image(univ_img,use_column_width='auto')
 st.sidebar.markdown(
 """
 <psidebar>
-Ce dispositif médical est en cours de développement dans le cadre d'un projet de recherche du DU d'intelligence artificielle appliquée et n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique et son usage est exclusivement confidentiel. <br>
+Ce dispositif médical est en cours de développement dans le cadre d'un projet de recherche du DU d'intelligence artificielle appliquée et n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique. <br>
 Son utilisation, quelle qu'en soit sa nature, ne peut engager la responsabilité de ses créateurs. <br>
 Cet outil est la propriété intellectuelle des auteurs. <br>
 Toute contrefaçon, plagiat, reproduction illicite est interdite. <br>
