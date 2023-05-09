@@ -43,7 +43,7 @@ p {
 }
 
 psidebar {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #2C3E50;
     margin-bottom: 30px;
     text-align: left;
@@ -212,7 +212,7 @@ def company_card():
     photo1 = "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign.jpg?raw=true"
     photo2 = "https://u-paris.fr/wp-content/uploads/2022/03/UniversiteParisCite_logo_horizontal_couleur_RVB.png"
     description = """
-        MetaboSign est spécialisée dans l'identification de profil métabolomique sérique par LC-MS/MS et investit continuellement en R&D pour identifier d'autres applications suite à ce premier outil. 
+        MetaboSign est spécialisée dans l'identification de profil métabolomique sérique par LC-MS/MS caractéristiques d'une pathologie. 
         """
     # Create a card to display the team member's information
     #st.write(f"<div class='metabosign-card'><img src='{photo1}'><p>{description}</p></div>", unsafe_allow_html=True)
@@ -256,8 +256,7 @@ st.sidebar.image(univ_img,use_column_width='auto')
 st.sidebar.markdown(
 """
 <psidebar>
-Ce dispositif médical est encore en développement. <br>
-Il n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique et son usage est exclusivement confidentiel. <br>
+Ce dispositif médical est en cours de développement dans le cadre d'un projet de recherche du DU d'intelligence artificielle appliquée et n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique et son usage est exclusivement confidentiel. <br>
 Son utilisation, quelle qu'en soit sa nature, ne peut engager la responsabilité de ses créateurs. <br>
 Cet outil est la propriété intellectuelle des auteurs. <br>
 Toute contrefaçon, plagiat, reproduction illicite est interdite. <br>
