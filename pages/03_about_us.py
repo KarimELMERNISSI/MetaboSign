@@ -247,7 +247,7 @@ def about_us():
         for name in team:
             personal_card(name)
     
-    qr_card()
+    #qr_card()
 
 about_us()
 
