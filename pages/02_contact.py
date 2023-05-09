@@ -157,6 +157,7 @@ st.sidebar.markdown(
 """
 <psidebar>
 Ce dispositif médical est encore en développement. <br>
+Il n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique et son usage est exclusivement confidentiel. <br>
 Son utilisation, quelle qu'en soit sa nature, ne peut engager la responsabilité de ses créateurs. <br>
 Cet outil est la propriété intellectuelle des auteurs. <br>
 Toute contrefaçon, plagiat, reproduction illicite est interdite. <br>
