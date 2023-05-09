@@ -212,7 +212,7 @@ def company_card():
     photo1 = "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/metabosign.jpg?raw=true"
     photo2 = "https://u-paris.fr/wp-content/uploads/2022/03/UniversiteParisCite_logo_horizontal_couleur_RVB.png"
     description = """
-        MetaboSign est spécialisée dans l'identification de profil métabolomique sérique par LC-MS/MS caractéristiques d'une pathologie. 
+        MetaboSign est spécialisée dans l'identification de profil métabolomique sérique par LC-MS/MS caractéristique d'une pathologie. 
         """
     # Create a card to display the team member's information
     #st.write(f"<div class='metabosign-card'><img src='{photo1}'><p>{description}</p></div>", unsafe_allow_html=True)
@@ -258,7 +258,7 @@ st.sidebar.markdown(
 <psidebar>
 Ce dispositif médical est en cours de développement dans le cadre d'un projet de recherche du DU d'intelligence artificielle appliquée et n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique. <br>
 Son utilisation, quelle qu'en soit sa nature, ne peut engager la responsabilité de ses créateurs. <br>
-Cet outil est la propriété intellectuelle des auteurs. <br>
+Cet outil est la propriété intellectuelle des auteurs. 
 Toute contrefaçon, plagiat, reproduction illicite est interdite. <br>
 L'Université de Paris Cité n'entend donner aucune approbation ou improbation à cette production qui doit être considérée comme propre à leurs auteurs.
 </psidebar>
