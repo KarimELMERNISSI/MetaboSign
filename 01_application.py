@@ -143,7 +143,7 @@ def main_page():
     st.markdown("# Présentation de l'application")
     st.markdown("## Tutoriel vidéo")
     #st.sidebar.markdown("# Présentation :medical_symbol:")
-    with st.expander(label="# MetaboSign-Corticosurrénale est une solution bout en bout permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS. Cet outil d'aide au diagnostic des corticosurrénalomes est le fruit d'un projet réalisé dans le cadre du DU Intelligence artificielle appliquée en santé à l'Université Paris Cité. Il n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique et son usage est exclusivement confidentiel.",expanded=True):
+    with st.expander(label="# MetaboSign-Corticosurrénale est une solution permettant d'accélérer le diagnostic de malignité des tumeurs de la corticosurrénale sur base de relevés sériques analysés en LC-MS/MS.",expanded=True):
         #st.markdown("Cet outil d'aide au diagnostic des corticosurrénalomes est le fruit d'un projet réalisé dans le cadre du DU Intelligence artificielle appliquée en santé à l'Université Paris Cité. Il n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique et son usage est exclusivement confidentiel.")
         st.video('https://youtu.be/ntRInkPfY7Y', start_time=0)
     st.markdown("## Rappels sur la glande surrénale")
