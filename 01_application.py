@@ -163,7 +163,7 @@ def main_page():
 def saisie_manuelle():
     st.markdown("# Saisie manuelle")
     #st.sidebar.markdown("# Saisie manuelle :writing_hand:")
-    st.markdown("*En cas de problème d'affichage, penser à refermer le volet ou agrandissez la fenêtre")
+    st.markdown(":red[*En cas de problème d'affichage, pensez à refermer le volet ou agrandissez la fenêtre]")
     avs.add_vertical_space(4)
     col0, col1, col2, col4, col5, col6, col7, col8, col9= st.columns(9,gap="small") #col3,
     id= col0.text_input('id', help="string identifer")
