@@ -177,7 +177,7 @@ team = {
         "bio": "Endocrinologue-Biologiste en Hormonologie"
     },
     "Christelle Cahen": {
-        "title": "Co-Founder & industry",
+        "title": "Co-Founder & Industry",
         "photo": "https://github.com/KarimELMERNISSI/MetaboSign/blob/main/images/Christelle.jpg?raw=true",
         "bio": "Business, Entrepreneuriat"
     },
