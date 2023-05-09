@@ -347,7 +347,7 @@ st.sidebar.image(univ_img,use_column_width='auto',)
 st.sidebar.markdown(
 """
 <psidebar>
-Ce dispositif médical est en cours de développement dans le cadre d'un projet de recherche du DU d'intelligence artificielle appliquée et n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique. <br>
+Ce dispositif médical est en cours de développement dans le cadre d'un projet de recherche du DU d'intelligence artificielle appliquée en santé et n'a fait l'objet d'aucune évaluation clinique, ni réglementaire, ni juridique. <br>
 Son utilisation, quelle qu'en soit sa nature, ne peut engager la responsabilité de ses créateurs. <br>
 Cet outil est la propriété intellectuelle des auteurs. 
 Toute contrefaçon, plagiat, reproduction illicite est interdite. <br>
